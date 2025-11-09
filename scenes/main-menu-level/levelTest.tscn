@@ -1,0 +1,327 @@
+[gd_scene load_steps=19 format=3 uid="uid://cb04j3u2vmdoy"]
+
+[ext_resource type="Script" uid="uid://b2lga0lk1ns08" path="res://scripts/main-menu/levelTest/level_test.gd" id="1_es21t"]
+[ext_resource type="Texture2D" uid="uid://bb0t4gmipmtyo" path="res://assets/main-menu/bg.png" id="1_gceon"]
+[ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="3_g3x4x"]
+[ext_resource type="PackedScene" uid="uid://du53rpygby46x" path="res://scenes/pause-menu/PauseMenu.tscn" id="4_g3x4x"]
+[ext_resource type="AudioStream" uid="uid://diljrnuecg8t6" path="res://assets/audio/Богдан Титомир-Петля Feat. Туман, Иван.mp3" id="5_0dpyq"]
+[ext_resource type="Script" uid="uid://b0v8yhoj5msw3" path="res://scripts/main-menu/settings.gd" id="5_xhpos"]
+[ext_resource type="Script" uid="uid://sany6qe2i5wt" path="res://scripts/main-menu/music_control.gd" id="6_q68e1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ltnhm"]
+texture = ExtResource("1_gceon")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dpyq"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhpos"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fj78p"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ktw3w"]
+color = Color(1, 1, 1, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_t5ge1"]
+color = Color(0.16565639, 0.16565642, 0.16565639, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g57nu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="GDScript" id="GDScript_ajm3x"]
+script/source = "extends OptionButton
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d7re"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panc6"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iysx6"]
+bg_color = Color(0.2702219, 0.27022195, 0.27022177, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_es21t")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ltnhm")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -147.0
+offset_top = -124.0
+offset_right = 147.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 66
+theme_override_styles/normal = SubResource("StyleBoxFlat_0dpyq")
+text = "Click
+"
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.0
+offset_top = 105.0
+offset_right = -50.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 50
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 31.0
+offset_top = 105.0
+offset_right = 71.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 50
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_g3x4x")]
+visible = false
+layout_mode = 1
+
+[node name="Settings" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.49835
+offset_top = -226.5
+offset_right = 226.49835
+offset_bottom = 226.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xhpos")
+script = ExtResource("5_xhpos")
+
+[node name="SettingsTitle" type="Label" parent="Settings"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 36
+text = "settings_title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Settings"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 76.0
+offset_right = -65.996704
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_fj78p")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_right = 161.0
+offset_bottom = 247.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="SettingsMaster" type="VBoxContainer" parent="Settings/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MasterSlider" type="Label" parent="Settings/Panel/VBoxContainer/SettingsMaster"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+text = "settings_master"
+
+[node name="MasterControl" type="HSlider" parent="Settings/Panel/VBoxContainer/SettingsMaster"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ktw3w")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_t5ge1")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_t5ge1")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="SettingsMusic" type="VBoxContainer" parent="Settings/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MusicSlider" type="Label" parent="Settings/Panel/VBoxContainer/SettingsMusic"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+text = "settings_music"
+
+[node name="MusicControl" type="HSlider" parent="Settings/Panel/VBoxContainer/SettingsMusic"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ktw3w")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_t5ge1")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_t5ge1")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("6_q68e1")
+audio_bus_name = "Music"
+
+[node name="SetingsSFX" type="VBoxContainer" parent="Settings/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="SFXSlider" type="Label" parent="Settings/Panel/VBoxContainer/SetingsSFX"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_g3x4x")
+text = "settings_SFX"
+
+[node name="SFXControl" type="HSlider" parent="Settings/Panel/VBoxContainer/SetingsSFX"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_ktw3w")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_t5ge1")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_t5ge1")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="FullscreenControl" type="CheckButton" parent="Settings/Panel"]
+layout_direction = 4
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -12.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxFlat_g57nu")
+text = "settings_fullscreen_toggle"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/Panel"]
+layout_mode = 0
+offset_left = 1.5
+offset_top = 216.0
+offset_right = 323.5
+offset_bottom = 247.0
+
+[node name="Language" type="Label" parent="Settings/Panel/HBoxContainer"]
+layout_mode = 2
+text = "Язык"
+
+[node name="LanguageSelector" type="OptionButton" parent="Settings/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 0
+item_count = 2
+popup/item_0/text = "Русский"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+script = SubResource("GDScript_ajm3x")
+
+[node name="BackMenu" type="Button" parent="Settings/Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -131.5
+offset_top = -77.0
+offset_right = 139.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_g3x4x")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_2d7re")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_panc6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_iysx6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_panc6")
+text = "menu_back"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_0dpyq")
+autoplay = true
+bus = &"Music"
+
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="PauseMenu/MainMenuButton/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/MainMenuButton/SaveGame" to="." method="_on_save_game_pressed"]
+[connection signal="pressed" from="PauseMenu/MainMenuButton/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PauseMenu/MainMenuButton/Quit" to="." method="_on_quit_pressed"]
+[connection signal="value_changed" from="Settings/Panel/VBoxContainer/SettingsMusic/MusicControl" to="Settings/Panel/VBoxContainer/SettingsMusic/MusicControl" method="_on_value_changed"]
+[connection signal="toggled" from="Settings/Panel/FullscreenControl" to="Settings" method="_on_fullscreen_control_toggled"]
+[connection signal="pressed" from="Settings/Panel/BackMenu" to="." method="_on_back_menu_pressed"]
+
+[editable path="PauseMenu"]

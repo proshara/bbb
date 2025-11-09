@@ -1,0 +1,135 @@
+[gd_scene load_steps=6 format=3 uid="uid://du53rpygby46x"]
+
+[ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="1_jhmeq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0f0as"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhmeq"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44h6o"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gddaf"]
+bg_color = Color(0.2702219, 0.27022195, 0.27022177, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameName" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -282.0
+offset_top = -283.0
+offset_right = 282.0
+offset_bottom = -217.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+theme_override_constants/shadow_offset_y = 5
+theme_override_fonts/font = ExtResource("1_jhmeq")
+theme_override_font_sizes/font_size = 65
+theme_override_styles/normal = SubResource("StyleBoxFlat_0f0as")
+text = "Название игры"
+
+[node name="MainMenuButton" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -105.0
+offset_right = 185.84692
+offset_bottom = 266.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Continue" type="Button" parent="MainMenuButton"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jhmeq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhmeq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44h6o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gddaf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_44h6o")
+text = "continue_game"
+
+[node name="SaveGame" type="Button" parent="MainMenuButton"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jhmeq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhmeq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44h6o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gddaf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_44h6o")
+text = "save_game"
+
+[node name="Settings" type="Button" parent="MainMenuButton"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jhmeq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhmeq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44h6o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gddaf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_44h6o")
+text = "settings_title"
+
+[node name="Quit" type="Button" parent="MainMenuButton"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_jhmeq")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jhmeq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44h6o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gddaf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_44h6o")
+text = "menu_back"

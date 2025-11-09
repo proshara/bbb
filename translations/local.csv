@@ -1,0 +1,20 @@
+key,en,ru
+menu_play,Play,Играть
+menu_back,Back,Назад
+menu_quit,Quit,Выйти
+
+settings_title,Settings,Настройки
+settings_music,Music,Музыка
+settings_master,Master,Основная громкость
+settings_SFX,Sound Effect,Звуковые эффекты
+settings_fullscreen_toggle,Fullscreen,На весь экран
+settings_language,Language,Язык
+
+continue_game,Continue,Продолжить
+start_game,Start,Начать
+
+new_game,New Game,Новая игра
+save_game,Save Game,Сохранить
+
+editor_name_player,Name:,Имя:
+player_random,Random,Случайно
