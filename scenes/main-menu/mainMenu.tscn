@@ -1,14 +1,12 @@
-[gd_scene load_steps=26 format=3 uid="uid://c2jsuyx5jqvgk"]
+[gd_scene load_steps=15 format=3 uid="uid://c2jsuyx5jqvgk"]
 
-[ext_resource type="Script" uid="uid://diim4kfjor7be" path="res://scripts/main-menu/main_menu.gd" id="1_naxqw"]
-[ext_resource type="Texture2D" uid="uid://bb0t4gmipmtyo" path="res://assets/main-menu/bg.png" id="1_qhk2d"]
-[ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="2_naxqw"]
-[ext_resource type="Script" uid="uid://b0v8yhoj5msw3" path="res://scripts/main-menu/settings.gd" id="4_hy6po"]
-[ext_resource type="Script" uid="uid://sany6qe2i5wt" path="res://scripts/main-menu/music_control.gd" id="5_sg3tv"]
-[ext_resource type="AudioStream" uid="uid://diljrnuecg8t6" path="res://assets/audio/Богдан Титомир-Петля Feat. Туман, Иван.mp3" id="5_w2hs4"]
+[ext_resource type="Script" uid="uid://diim4kfjor7be" path="res://scripts/main-menu/main_menu.gd" id="1_aoiek"]
+[ext_resource type="Texture2D" uid="uid://bb0t4gmipmtyo" path="res://assets/main-menu/bg.png" id="2_utspj"]
+[ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="3_3wx57"]
+[ext_resource type="AudioStream" uid="uid://diljrnuecg8t6" path="res://assets/audio/Богдан Титомир-Петля Feat. Туман, Иван.mp3" id="4_3ubsg"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hy6po"]
-texture = ExtResource("1_qhk2d")
+texture = ExtResource("2_utspj")
 modulate_color = Color(0.18121095, 0.18121095, 0.18121095, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w2hs4"]
@@ -46,45 +44,8 @@ corner_radius_bottom_left = 20
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lhle4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg3tv"]
-bg_color = Color(0.13725491, 0.13725491, 0.13725491, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sg3tv"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_hy6po"]
-color = Color(0.16470589, 0.16470589, 0.16470589, 1)
-thickness = 5
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_w2hs4"]
-color = Color(1, 1, 1, 0.59607846)
-thickness = 5
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_lhle4"]
-color = Color(1, 1, 1, 1)
-thickness = 5
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_sg3tv"]
-color = Color(1, 1, 1, 1)
-thickness = 5
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_eel2y"]
-color = Color(1, 1, 1, 1)
-thickness = 5
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhle4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgvlk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="GDScript" id="GDScript_sg3tv"]
-script/source = "extends OptionButton
-"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eel2y"]
 bg_color = Color(1, 1, 1, 1)
@@ -92,9 +53,6 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kgvlk"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7m0km"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -110,7 +68,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_naxqw")
+script = ExtResource("1_aoiek")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -136,13 +94,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
 theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 65
 theme_override_styles/normal = SubResource("StyleBoxFlat_w2hs4")
 text = "Название игры"
 
 [node name="MainMenuButton" type="VBoxContainer" parent="Panel"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -161,7 +118,7 @@ theme_override_constants/separation = 10
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -173,7 +130,7 @@ text = "menu_play"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -185,7 +142,7 @@ text = "settings_title"
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -223,7 +180,7 @@ layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -238,7 +195,7 @@ layout_mode = 2
 size_flags_horizontal = 7
 size_flags_vertical = 5
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -262,185 +219,9 @@ grow_vertical = 0
 size_flags_horizontal = 6
 size_flags_vertical = 7
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
-theme_override_styles/hover = SubResource("StyleBoxFlat_naxqw")
-theme_override_styles/focus = SubResource("StyleBoxFlat_hy6po")
-text = "menu_back"
-
-[node name="Settings" type="Panel" parent="Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -231.0
-offset_top = -185.0
-offset_right = 221.9967
-offset_bottom = 268.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_sg3tv")
-script = ExtResource("4_hy6po")
-
-[node name="SettingsTitle" type="Label" parent="Panel/Settings"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 82.0
-grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
-theme_override_font_sizes/font_size = 36
-text = "settings_title"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Panel" type="Panel" parent="Panel/Settings"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 62.0
-offset_top = 76.0
-offset_right = -65.996704
-offset_bottom = -17.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_sg3tv")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Settings/Panel"]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -161.0
-offset_right = 161.0
-offset_bottom = 247.0
-grow_horizontal = 2
-theme_override_constants/separation = 20
-
-[node name="SettingsMaster" type="VBoxContainer" parent="Panel/Settings/Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="MasterSlider" type="Label" parent="Panel/Settings/Panel/VBoxContainer/SettingsMaster"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
-text = "settings_master"
-
-[node name="MasterControl" type="HSlider" parent="Panel/Settings/Panel/VBoxContainer/SettingsMaster"]
-layout_mode = 2
-theme_override_styles/slider = SubResource("StyleBoxLine_hy6po")
-theme_override_styles/grabber_area = SubResource("StyleBoxLine_w2hs4")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_lhle4")
-max_value = 1.0
-step = 0.05
-value = 0.5
-
-[node name="SettingsMusic" type="VBoxContainer" parent="Panel/Settings/Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="MusicSlider" type="Label" parent="Panel/Settings/Panel/VBoxContainer/SettingsMusic"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
-text = "settings_music"
-
-[node name="MusicControl" type="HSlider" parent="Panel/Settings/Panel/VBoxContainer/SettingsMusic"]
-layout_mode = 2
-theme_override_constants/center_grabber = 0
-theme_override_constants/grabber_offset = 0
-theme_override_styles/slider = SubResource("StyleBoxLine_hy6po")
-theme_override_styles/grabber_area = SubResource("StyleBoxLine_w2hs4")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_sg3tv")
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("5_sg3tv")
-audio_bus_name = "Music"
-
-[node name="SetingsSFX" type="VBoxContainer" parent="Panel/Settings/Panel/VBoxContainer"]
-layout_mode = 2
-
-[node name="SFXSlider" type="Label" parent="Panel/Settings/Panel/VBoxContainer/SetingsSFX"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
-text = "settings_SFX"
-
-[node name="SFXControl" type="HSlider" parent="Panel/Settings/Panel/VBoxContainer/SetingsSFX"]
-layout_mode = 2
-theme_override_styles/slider = SubResource("StyleBoxLine_hy6po")
-theme_override_styles/grabber_area = SubResource("StyleBoxLine_w2hs4")
-theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_eel2y")
-max_value = 1.0
-step = 0.05
-value = 0.5
-
-[node name="FullscreenControl" type="CheckButton" parent="Panel/Settings/Panel"]
-layout_direction = 4
-layout_mode = 1
-anchors_preset = 14
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -5.0
-offset_top = -12.5
-offset_right = 5.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/h_separation = 0
-theme_override_fonts/font = ExtResource("2_naxqw")
-theme_override_font_sizes/font_size = 16
-theme_override_styles/focus = SubResource("StyleBoxFlat_lhle4")
-text = "settings_fullscreen_toggle"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/Settings/Panel"]
-layout_mode = 0
-offset_left = 1.5
-offset_top = 216.0
-offset_right = 323.5
-offset_bottom = 247.0
-
-[node name="Language" type="Label" parent="Panel/Settings/Panel/HBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
-text = "settings_language"
-
-[node name="LanguageSelector" type="OptionButton" parent="Panel/Settings/Panel/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 10
-theme_override_fonts/font = ExtResource("2_naxqw")
-selected = 0
-item_count = 2
-popup/item_0/text = "Русский"
-popup/item_0/id = 0
-popup/item_1/text = "English"
-popup/item_1/id = 1
-script = SubResource("GDScript_sg3tv")
-
-[node name="BackMenu" type="Button" parent="Panel/Settings/Panel"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -131.5
-offset_top = -77.0
-offset_right = 139.5
-offset_bottom = -19.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxFlat_eel2y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
 theme_override_styles/hover = SubResource("StyleBoxFlat_naxqw")
 theme_override_styles/focus = SubResource("StyleBoxFlat_hy6po")
@@ -489,7 +270,7 @@ grow_horizontal = 2
 
 [node name="Label" type="Label" parent="Panel/EditorPlayer/Choice/HBoxContainer2"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 text = "editor_name_player"
 
 [node name="LineEdit" type="LineEdit" parent="Panel/EditorPlayer/Choice/HBoxContainer2"]
@@ -514,7 +295,7 @@ theme_override_constants/separation = 16
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_eel2y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -525,7 +306,7 @@ text = "menu_back"
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_eel2y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -553,7 +334,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_eel2y")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -561,7 +342,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_naxqw")
 text = "player_random"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_w2hs4")
+stream = ExtResource("4_3ubsg")
 autoplay = true
 bus = &"Music"
 
@@ -681,7 +462,7 @@ grow_horizontal = 2
 grow_vertical = 0
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_naxqw")
+theme_override_fonts/font = ExtResource("3_3wx57")
 theme_override_font_sizes/font_size = 24
 theme_override_styles/normal = SubResource("StyleBoxFlat_fusrs")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_hy6po")
@@ -695,9 +476,6 @@ text = "Принять"
 [connection signal="pressed" from="Panel/ChoiceGame/HBoxContainer/ContinueGame" to="." method="_on_continue_game_pressed"]
 [connection signal="pressed" from="Panel/ChoiceGame/HBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Panel/ChoiceGame/BackMenu" to="." method="_on_back_menu_pressed"]
-[connection signal="value_changed" from="Panel/Settings/Panel/VBoxContainer/SettingsMusic/MusicControl" to="Panel/Settings/Panel/VBoxContainer/SettingsMusic/MusicControl" method="_on_value_changed"]
-[connection signal="toggled" from="Panel/Settings/Panel/FullscreenControl" to="Panel/Settings" method="_on_fullscreen_control_toggled"]
-[connection signal="pressed" from="Panel/Settings/Panel/BackMenu" to="." method="_on_back_menu_pressed"]
 [connection signal="pressed" from="Panel/EditorPlayer/Choice/HBoxContainer/BackToLoad" to="." method="_on_back_to_load_pressed"]
 [connection signal="pressed" from="Panel/EditorPlayer/Choice/HBoxContainer/StartNewGame" to="." method="_on_start_new_game_pressed"]
 [connection signal="pressed" from="PrivacyPolicy/PrivacyPolicy/AcceptPrivacy" to="." method="_on_accept_privacy_pressed"]

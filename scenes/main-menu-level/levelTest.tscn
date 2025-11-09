@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b2lga0lk1ns08" path="res://scripts/main-menu/levelTest/level_test.gd" id="1_es21t"]
 [ext_resource type="Texture2D" uid="uid://bb0t4gmipmtyo" path="res://assets/main-menu/bg.png" id="1_gceon"]
 [ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="3_g3x4x"]
-[ext_resource type="PackedScene" uid="uid://du53rpygby46x" path="res://scenes/pause-menu/PauseMenu.tscn" id="4_g3x4x"]
+[ext_resource type="PackedScene" uid="uid://du53rpygby46x" path="res://scenes/pause-menu/pauseMenu.tscn" id="4_g3x4x"]
 [ext_resource type="AudioStream" uid="uid://diljrnuecg8t6" path="res://assets/audio/Богдан Титомир-Петля Feat. Туман, Иван.mp3" id="5_0dpyq"]
 [ext_resource type="Script" uid="uid://b0v8yhoj5msw3" path="res://scripts/main-menu/settings.gd" id="5_xhpos"]
 [ext_resource type="Script" uid="uid://sany6qe2i5wt" path="res://scripts/main-menu/music_control.gd" id="6_q68e1"]

@@ -1,0 +1,251 @@
+[gd_scene load_steps=15 format=3 uid="uid://der65lr2c22nt"]
+
+[ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="1_apifq"]
+[ext_resource type="Script" uid="uid://sany6qe2i5wt" path="res://scripts/main-menu/music_control.gd" id="2_ey5kl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td0ub"]
+bg_color = Color(0.13725491, 0.13725491, 0.13725491, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eusmv"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_bcjko"]
+color = Color(0.16470589, 0.16470589, 0.16470589, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_tg708"]
+color = Color(1, 1, 1, 0.59607846)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_oayx6"]
+color = Color(1, 1, 1, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_qwsta"]
+color = Color(1, 1, 1, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_6rvoa"]
+color = Color(1, 1, 1, 1)
+thickness = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tic63"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="GDScript" id="GDScript_o1x6h"]
+script/source = "extends OptionButton
+"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3tdi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qwv5"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vop4m"]
+bg_color = Color(0.2702219, 0.27022195, 0.27022177, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Settings" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = -185.0
+offset_right = 221.9967
+offset_bottom = 268.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_td0ub")
+
+[node name="SettingsTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_apifq")
+theme_override_font_sizes/font_size = 36
+text = "settings_title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = 76.0
+offset_right = -65.996704
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_eusmv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -161.0
+offset_right = 161.0
+offset_bottom = 247.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+
+[node name="SettingsMaster" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MasterSlider" type="Label" parent="Panel/VBoxContainer/SettingsMaster"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_apifq")
+text = "settings_master"
+
+[node name="MasterControl" type="HSlider" parent="Panel/VBoxContainer/SettingsMaster"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_bcjko")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_tg708")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_oayx6")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="SettingsMusic" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MusicSlider" type="Label" parent="Panel/VBoxContainer/SettingsMusic"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_apifq")
+text = "settings_music"
+
+[node name="MusicControl" type="HSlider" parent="Panel/VBoxContainer/SettingsMusic"]
+layout_mode = 2
+theme_override_constants/center_grabber = 0
+theme_override_constants/grabber_offset = 0
+theme_override_styles/slider = SubResource("StyleBoxLine_bcjko")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_tg708")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_qwsta")
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("2_ey5kl")
+audio_bus_name = "Music"
+
+[node name="SetingsSFX" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="SFXSlider" type="Label" parent="Panel/VBoxContainer/SetingsSFX"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_apifq")
+text = "settings_SFX"
+
+[node name="SFXControl" type="HSlider" parent="Panel/VBoxContainer/SetingsSFX"]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxLine_bcjko")
+theme_override_styles/grabber_area = SubResource("StyleBoxLine_tg708")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxLine_6rvoa")
+max_value = 1.0
+step = 0.05
+value = 0.5
+
+[node name="FullscreenControl" type="CheckButton" parent="Panel"]
+layout_direction = 4
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -12.5
+offset_right = 5.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("1_apifq")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/focus = SubResource("StyleBoxFlat_tic63")
+text = "settings_fullscreen_toggle"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 1.5
+offset_top = 216.0
+offset_right = 323.5
+offset_bottom = 247.0
+
+[node name="Language" type="Label" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_apifq")
+text = "settings_language"
+
+[node name="LanguageSelector" type="OptionButton" parent="Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("1_apifq")
+selected = 0
+item_count = 2
+popup/item_0/text = "Русский"
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/id = 1
+script = SubResource("GDScript_o1x6h")
+
+[node name="BackMenu" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -131.5
+offset_top = -77.0
+offset_right = 139.5
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_apifq")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_d3tdi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2qwv5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vop4m")
+theme_override_styles/focus = SubResource("StyleBoxFlat_2qwv5")
+text = "menu_back"
+
+[connection signal="value_changed" from="Panel/VBoxContainer/SettingsMusic/MusicControl" to="Panel/VBoxContainer/SettingsMusic/MusicControl" method="_on_value_changed"]
+[connection signal="toggled" from="Panel/FullscreenControl" to="." method="_on_fullscreen_control_toggled"]

@@ -5,8 +5,6 @@ extends Panel
 
 @onready var back_menu: Button = $Panel/BackMenu
 
-func _ready() -> void:
-	pass
 
 func _on_fullscreen_control_toggled(toggled_on: bool) -> void:
 	if toggled_on == true:

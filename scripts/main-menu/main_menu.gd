@@ -1,15 +1,17 @@
 extends Control
 
 @onready var main_menu_button: VBoxContainer = $Panel/MainMenuButton
-@onready var settings: Panel = $Panel/Settings
 @onready var choice_game: Panel = $Panel/ChoiceGame
 @onready var continue_game: Button = $Panel/ChoiceGame/HBoxContainer/ContinueGame
 @onready var editor_player: Panel = $Panel/EditorPlayer
 @onready var privacy_policy: Control = $PrivacyPolicy
 
+var settings_scene = preload("res://scenes/settings-menu/settingsMenu.tscn")
+var settings_instance = settings_scene.instantiate()
+
+
 func _ready() -> void:
 	main_menu_button.visible = false
-	settings.visible = false
 	choice_game.visible = false
 	editor_player.visible = false
 	privacy_policy.visible = true
@@ -21,7 +23,7 @@ func _on_start_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	main_menu_button.visible = false
-	settings.visible = true
+	add_child(settings_instance)
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
@@ -29,7 +31,7 @@ func _on_quit_pressed() -> void:
 func _on_back_menu_pressed() -> void:
 	main_menu_button.visible = true
 	choice_game.visible = false
-	settings.visible = false
+	remove_child(settings_instance)
 
 func _on_new_game_pressed() -> void:
 	Global.gold = 0

@@ -1,6 +1,8 @@
 extends Control
 
-@onready var settings_menu: Panel = $Settings
+var settings_scene = preload("res://scenes/settings-menu/settingsMenu.tscn")
+var settings_instance = settings_scene.instantiate()
+
 @onready var pause_menu: Control = $PauseMenu
 @onready var labelCounter: Label = $Panel/Label
 @onready var labelCounterMinus: Label = $Panel/Label2
@@ -13,7 +15,6 @@ func _ready() -> void:
 	labelCounter.text = str(Global.gold)
 	labelCounterMinus.text = str(Global.gold_minus)
 	pause_menu.visible = false
-	settings_menu.visible = false
 
 func toggle_pause():
 	pause_menu.visible = is_paused
@@ -41,11 +42,11 @@ func _on_quit_pressed() -> void:
 
 func _on_settings_pressed() -> void:
 	pause_menu.visible = false
-	settings_menu.visible = true
+	add_child(settings_instance)
 
 func _on_back_menu_pressed() -> void:
 	pause_menu.visible = true
-	settings_menu.visible = false
+	remove_child(settings_instance)
 
 func _on_save_game_pressed() -> void:
 	Global.save_game()

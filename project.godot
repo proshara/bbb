@@ -17,7 +17,6 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 [autoload]
 
 Global="*res://autoload/Global.gd"
-Progress="*res://autoload/Progress.gd"
 Settings="*res://autoload/Settings.gd"
 
 [display]
