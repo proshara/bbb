@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://der65lr2c22nt"]
+[gd_scene load_steps=16 format=3 uid="uid://der65lr2c22nt"]
 
 [ext_resource type="FontFile" uid="uid://dyje33a5fcyef" path="res://assets/fonts/Monocraft.otf" id="1_apifq"]
+[ext_resource type="Script" uid="uid://b0v8yhoj5msw3" path="res://scripts/main-menu/settings.gd" id="1_ey5kl"]
 [ext_resource type="Script" uid="uid://sany6qe2i5wt" path="res://scripts/main-menu/music_control.gd" id="2_ey5kl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td0ub"]
@@ -86,6 +87,7 @@ offset_bottom = 268.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_td0ub")
+script = ExtResource("1_ey5kl")
 
 [node name="SettingsTitle" type="Label" parent="."]
 layout_mode = 1
